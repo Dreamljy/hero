@@ -4,7 +4,6 @@ import { query } from './service';
 import styles from './index.less';//导入样式
 import { useRequest} from 'alita'
 import { Row, Col } from 'antd';
-import LazyLoad from 'react-lazyload';
 
 interface HeroPageProps {}
 
@@ -31,9 +30,9 @@ const HeroPage : FC<HeroPageProps> = ( )=> {
                   return(
                        <Col key={index} span={3} className={styles.heroitem}>
                           {/* https://game.gtimg.cn/images/yxzj/img201606/heroimg/536/536.jpg */}
-                          <LazyLoad>
+                          
                             <img src={`https://game.gtimg.cn/images/yxzj/img201606/heroimg/${item.ename}/${item.ename}.jpg`} />
-                          </LazyLoad>
+                          
                           
                           <p>{item.cname}</p>
                       </Col>
