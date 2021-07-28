@@ -6,20 +6,18 @@ import { Layout,Menu } from 'antd';
 const { Header, Content, Footer } = Layout;
 //alita路由,里面封装了react-route的路由
 import { Link } from 'alita';
-const BasicLayout: React.FC = ({ children,location: { pathname } }) => {
+const BasicLayout: React.FC = ({ children }) => {
     return(
         <Layout>
             <Header>
                 <div className={styles.logo}>王者荣耀资料库</div>
                 <Menu theme="dark" 
                     mode="horizontal" 
-                    defaultSelectedKeys={[pathname]} 
-                    styles={{lineHeight:'64px'}} 
                 >
                     {
                         menuData.map((item,index)=>{
                             return(
-                                <Menu.Item key="/hero" key={`${item.route}`} >
+                                <Menu.Item key={index}  >
                                     <Link to={item.route}>{item.name}</Link>
                                 </Menu.Item>
                             )
@@ -35,7 +33,7 @@ const BasicLayout: React.FC = ({ children,location: { pathname } }) => {
             </div>
             </Content>
             <Footer style={{ textAlign: 'center' }}>
-            Alita 入门教程 Created by xiaohuoni
+              Alita 入门教程 Created by xiaohuoni
             </Footer>
         </Layout>
     )

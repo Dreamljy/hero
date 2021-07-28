@@ -1,8 +1,9 @@
 // 英雄页面
-import React,{FC} from 'react';
+import React,{ FC } from 'react';
 import { query } from './service';
-import styles from './index.less';//导入样式
-import { useRequest} from 'alita'
+//导入样式
+import styles from './index.less';
+import { useRequest } from 'alita'
 import { Row, Col } from 'antd';
 
 interface HeroPageProps {}
@@ -29,11 +30,8 @@ const HeroPage : FC<HeroPageProps> = ( )=> {
                 heros.map( (item:any,index:number)=>{
                   return(
                        <Col key={index} span={3} className={styles.heroitem}>
-                          {/* https://game.gtimg.cn/images/yxzj/img201606/heroimg/536/536.jpg */}
-                          
-                            <img src={`https://game.gtimg.cn/images/yxzj/img201606/heroimg/${item.ename}/${item.ename}.jpg`} />
-                          
-                          
+                          {/* https://game.gtimg.cn/images/yxzj/img201606/heroimg/536/536.jpg */}                          
+                            <img src={`https://game.gtimg.cn/images/yxzj/img201606/heroimg/${item.ename}/${item.ename}.jpg`} />                      
                           <p>{item.cname}</p>
                       </Col>
                   )

@@ -8,7 +8,7 @@ interface HomePageProps { }
 
 const HomePage: FC<HomePageProps> = () => {
   const { data } = useRequest(query);
-  return <div className={styles.center}>Hello {data?.text}</div>;
+  return <div className={ styles.center }>Hello { data?.text }</div>;
 };
 
 export default HomePage;
