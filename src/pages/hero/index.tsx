@@ -20,17 +20,22 @@ const HeroPage : FC<HeroPageProps> = ( )=> {
     ];
 
     const { data: heros = localData } = useRequest(query);
-    // console.log(data);
+    // console.log(heros);
     
     return (
         <div className={styles.center}>
             <Row>
-              {heros.map( (item:any) => (
-                <Col key={item.ename} span={3} className={styles.heroitem}>
-                  <img src={`https://game.gtimg.cn/images/yxzj/img201606/heroimg/${item.ename}/${item.ename}.jpg`} />
-                  <p>{item.cname}</p>
-                </Col>
-              ))}
+              {
+                heros.map( (item:any,index:number)=>{
+                  return(
+                       <Col key={index} span={3} className={styles.heroitem}>
+                          {/* https://game.gtimg.cn/images/yxzj/img201606/heroimg/536/536.jpg */}
+                          <img src={`https://game.gtimg.cn/images/yxzj/img201606/heroimg/${item.ename}/${item.ename}.jpg`} />
+                          <p>{item.cname}</p>
+                      </Col>
+                  )
+                })
+              }
             </Row>;
         </div>
     );

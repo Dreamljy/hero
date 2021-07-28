@@ -25,13 +25,17 @@ const SummonerPage :FC<SummonerPageProps> = ()=>{
         <div className={style.content}>
             <ul className={style.left}>
                 <Row>
-                    {item.map( (item:any) => (
-                    <Col key={item.summoner_id} span={5} className={style.item} onClick={()=>setMydate(item)} >
-                        {/* https://game.gtimg.cn/images/yxzj/img201606/itemimg/1111.jpg */}
-                        <img src={`https://game.gtimg.cn/images/yxzj/img201606/summoner/${item.summoner_id}.jpg`} />
-                        <p className="myp">{item.summoner_name}</p>
-                    </Col>
-                    ))}
+                    {item.map( (item:any) => {
+                        return(
+                            <Col key={item.summoner_id} span={5} className={style.item} onClick={()=>setMydate(item)} >
+                             {/* https://game.gtimg.cn/images/yxzj/img201606/itemimg/1111.jpg */}
+                            <img src={`https://game.gtimg.cn/images/yxzj/img201606/summoner/${item.summoner_id}.jpg`} />
+                                <p className="myp">{item.summoner_name}</p>
+                            </Col>
+                        )
+                    }
+                    
+                    )}
                 </Row>
             </ul>
             <div className={style.right}>

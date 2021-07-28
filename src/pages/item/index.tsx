@@ -17,18 +17,21 @@ const ItemPage : FC<ItemPagProps> = () =>{
             des1: "<p>+20物理攻击</p>"
         },
     ];
-    const { data: item = localData } = useRequest(query);
+
+    const { data: items = localData } = useRequest(query);
     return (
         <div className={style.center}>
             <Row>
-            {item.map( (item:any) => (
-            <Col key={item.ename} span={3} className={style.item}>
-                {/* https://game.gtimg.cn/images/yxzj/img201606/itemimg/1111.jpg */}
-                <img src={`https://game.gtimg.cn/images/yxzj/img201606/itemimg/${item.item_id}.jpg`} />
-                <p className="myp">{item. item_name}</p>
-            </Col>
-            ))}
-        </Row>
+                {
+                    items.map( (item:any) => {
+                        return (<Col key={item.item_id} span={3} className={style.item}>
+                            {/* https://game.gtimg.cn/images/yxzj/img201606/itemimg/1111.jpg */}
+                            <img src={`https://game.gtimg.cn/images/yxzj/img201606/itemimg/${item.item_id}.jpg`} />
+                             <p className="myp">{item.item_name}</p>
+                        </Col>)
+                    })
+                }
+            </Row>
         </div>
 
     )
