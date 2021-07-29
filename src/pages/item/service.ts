@@ -1,6 +1,6 @@
-import {request} from 'alita'
+import { request } from 'alita';
 
 export async function query(): Promise<any> {
-    // return request('https://pvp.qq.com/web201605/js/herolist.json', { method: 'get' });
-    return request('/api/item.json', { method: 'get' });;
+  // return request('https://pvp.qq.com/web201605/js/herolist.json', { method: 'get' });
+  return request('/api/item.json', { method: 'get' });
 }

@@ -9,7 +9,7 @@ const middleware = async (ctx: Context, next: any) => {
 };
 
 export const request = {
-  prefix: '', // 统一的请求头
+  prefix: '',
   middlewares: [middleware],
   headers: {
     Accept: 'application/json',

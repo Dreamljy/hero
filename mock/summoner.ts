@@ -1,5 +1,5 @@
-import summoner from "./summoner.json";
+import summoner from './summoner.json';
 
 export default {
-    '/api/summoner.json': summoner,
-}
+  '/api/summoner.json': summoner,
+};

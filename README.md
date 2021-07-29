@@ -1,25 +1,19 @@
-hero
-介绍
-用Alita框架完成一个小Demo，底层主要是用React框架和AntdUI框架来实现的
+#  项目简介
 
-软件架构
-软件架构说明
+> ## 1、项目使用框架
+>
+> > 本项目使用Alita框架编写，其底层是React框架，内嵌了AntdUI组件，用yarn工具下载依赖
+>
+> ## 2、项目来源
+>
+> > 本项目来源Alita官网的教程，其网址：https://alitajs.com/learn/tutorial/introduction
 
-安装教程
-yarn install
-xxxx
-xxxx
-使用说明
-yarn start
-参与贡献
-Fork 本仓库
-新建 Feat_xxx 分支
-提交代码
-新建 Pull Request
-特技
-使用 Readme_XXX.md 来支持不同的语言，例如 Readme_en.md, Readme_zh.md
-Gitee 官方博客 blog.gitee.com
-你可以 https://gitee.com/explore 这个地址来了解 Gitee 上的优秀开源项目
-GVP 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-Gitee 官方提供的使用手册 https://gitee.com/help
-Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 https://gitee.com/gitee-stars/
+# 运行说明
+
+> ## 1、下载依赖包
+>
+> > 命令：yarn
+>
+> ## 2、运行命令
+>
+> > 命令：yarn start

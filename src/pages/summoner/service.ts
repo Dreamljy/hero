@@ -1,5 +1,5 @@
+import { request } from 'alita';
 
-import {request} from 'alita'
-export async function query(){
-    return request("/api/summoner.json",{method:"get"});
+export async function query() {
+  return request('/api/summoner.json', { method: 'get' });
 }

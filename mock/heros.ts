@@ -1,5 +1,4 @@
-import herolist from './herolist.json'
+import herolist from './herolist.json';
 export default {
-    '/api/herolist.json': herolist,
-
+  '/api/herolist.json': herolist,
 };
